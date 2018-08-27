@@ -1,0 +1,162 @@
+/*CONTRACT -----------------------------------------------------------------------------------------------------------------------*/
+.contract-container, .feedback-container{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    border: 1px solid #003300;
+    
+    background-color: azure;
+}
+/*-------------------------------------------------------------------------------------------------*/
+@media(max-width: 417px){
+    .contract-container .errors_p, .feedback-container .errors_p2{
+        font-size: 2.5vw;
+    }
+}
+@media(min-width: 418px){
+    .contract-container .errors_p, .feedback-container .errors_p2{
+        font-size: 1.4vw;
+    }
+}
+.contract-container .errors_p, .feedback-container .errors_p2{
+    color: red;
+    display: none;
+}
+/*-------------------------------------------------------------------------------------------------*/
+.contract-container button, .feedback-container button{
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    color: #003300;
+    font-weight: bolder;
+    font-size: 2vw;
+    border: 2px solid #003300;
+    background-color: #ebfaeb;
+    transition: background-color 0.5s, color 0.5s, width 0.5s, margin 0.5s;
+}
+
+.contract-container button:hover, .feedback-container button:hover{
+    background-color: #003300;
+    color: #ebfaeb;
+    margin-left: 33%;
+    margin-right: 33%;
+    width: 34%;
+}
+
+.contract-container>h1, .feedback-container>h1{
+    font-size: 3.5vw;
+    font-weight: bolder;
+    text-align: center;
+    color: #003300;
+}
+@media(max-width: 417px){
+    .contract-container>p, .feedback-container>p{
+        font-size: 3.2vw;
+    }
+}
+@media(min-width: 418px){
+    .contract-container>p, .feedback-container>p{
+        font-size: 1.7vw;
+    }
+}
+.contract-container>p, .feedback-container>p{
+    font-weight: bold;
+    color: #003300;
+}
+/*-------------------------------------------------------------------------------------------------*/
+@media(max-width: 417px) {
+    .feedback-container [type="radio"]+span, .contract-container [type="radio"]+span{
+        font-size: 3vw;
+    }
+}
+@media(min-width: 418px) {
+    .feedback-container [type="radio"]+span, .contract-container [type="radio"]+span{
+        font-size: 1.5vw;
+    }
+}
+.feedback-container [type="radio"]+span, .contract-container [type="radio"]+span{
+    font-weight: bold;
+    color: #003300;
+}
+
+.feedback-container [type="radio"]:checked+span, .contract-container [type="radio"]:checked+span{
+    color: black;
+}
+/*-------------------------------------------------------------------------------------------------*/
+.feedback-container span:hover, .contract-container span:hover{
+    opacity: 0.7;
+}
+
+#contract-date, #feedback-date{
+    text-align: right;
+    font-size: 2vw;
+}
+
+#lastName-container, #firstName-container, #date-container, #phone-container, #email-container, #sex-container, #age-container, #home-container, #school-container, #description-container, #teacher-container, #health-container, #description-container2{
+    width: 95%;
+    color: #003300;
+}
+/*-------------------------------------------------------------------------------------------------*/
+@media(max-width: 417px){
+    .input-field label{
+        font-size: 3.5vw;
+    }
+}
+@media(min-width: 418px){
+    .input-field label{
+        font-size: 1.5vw;
+    }
+}
+.input-field label{
+    color: #003300;
+    font-weight: bold;
+}
+/*-------------------------------------------------------------------------------------------------*/
+@media(max-width: 417px) {
+    .input-field input[type=text], .input-field input[type=email], .input-field input[type=date], #input_description{
+        font-size: 3.5vw;
+    }
+}
+@media(min-width: 418px) {
+    .input-field input[type=text], .input-field input[type=email], .input-field input[type=date], #input_description{
+        font-size: 1.8vw;
+    }
+}
+.input-field input[type=text], .input-field input[type=email], .input-field input[type=date], textarea.materialize-textarea{
+    font-weight: bolder;
+    color: #003300;
+}
+/*-------------------------------------------------------------------------------------------------*/
+@media(max-width: 417px){
+    .input-field .material-icons{
+        font-size: 7vw;
+        padding-left: 2vw;
+        padding-top: 3vw;
+    }
+}
+@media(min-width: 418px){
+    .input-field .material-icons{
+        color: #003300;
+        font-size: 40px;
+    }
+}
+.input-field .material-icons{
+    color: #003300;
+}
+/*-------------------------------------------------------------------------------------------------*/
+
+/*ANIMATIONS -------------------------------------------------------------------------------------------------------------------------------*/
+@keyframes ask-animation{
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: #ccffcc;
+    }
+}

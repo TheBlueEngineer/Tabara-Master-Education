@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <!--character set-->
+        <meta charset="UTF-8">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="./css/materialize.min.css"  media="screen,projection"/>
+        <!--Import bootstrap.css-->
+        <link type="text/css" rel="stylesheet" href="./css/bootstrap.css">
+        <!--CSS FOR CONTACT.HTML-->
+        <link type="text/css" rel="stylesheet" href="./css/toolbar.css">
+        <link type="text/css" rel="stylesheet" href="./css/contact.css">
+        <!--JS FOR CONTACT.HTML-->
+        <script type="text/javascript" src="./js/contact.js" defer></script>
+        <script type="text/javascript" src="./js/toolbar.js" defer></script>
+        <!--JS FOR MATERIALIZE-->
+        <script type="text/javascript" src="./js/materialize.min.js" defer></script>
+        <!--JS FOR SMTP-->
+        <script src="https://smtpjs.com/v2/smtp.js"></script>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <!--BLACKZONE FROM THE TOOLBAR-->
+        <div id="blackzone-toolbar">
+        </div>
+        
+        <!--TOOLBAR-->
+        <div class="container-fluid" id="toolbar">
+            <div id="brand-logo"></div> 
+            <div id="brand"></div>  
+            
+            <a href="#!" id="dropdown-button"></a>
+            <ul id="dropdown-content" class="dropdown-menu-content hidden">
+                <li><a href="./index.html">Acasa</a></li>
+                <li><a href="./echipa.html">Echipa</a></li>
+                <li><a href="./tabere.html">Tabere</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <a href="./contact.html" id="button-contact" class="button-tool active waves-effect waves-light"></a>
+            <a href="./tabere.html" id="button-tabere" class="button-tool waves-effect waves-light"></a>
+            <a href="./echipa.html" id="button-echipa" class="button-tool waves-effect waves-light"></a>
+            <a href="./index.html" id="button-acasa" class="button-tool waves-effect waves-light"></a> 
+        </div>
+        
+        <!--PARALLAX BACKGROUND IMAGE-->
+        <div class="parallax-container">
+            <div class="parallax">
+                <img id="parallax1-image" src="./images/background/b_contact.webp">
+            </div>
+                <img id="parallax1-text" src="./images/logo5.webp">
+                <img id="parallax1-subtext" src="./images/contact.webp">
+        </div>
+        
+        <!--DOWN BORDER FOR PARALLAX BACKGROUND IMAGE-->
+        <div class="container-fluid" id="parallax1-border-top">
+        </div>
+        
+        <!--FIRST DESCRIPTION-->
+        <div class="container-fluid" id="first-description">
+            <h1>Formular de inscriere Master Education</h1><br/>
+            <p>
+            In urma completarii formularului de inscriere de mai jos, echipa Master Education va primi cererea dumneavoastra prin e-Mail la adresa completeaza@gmail.com. Pentru orice fel de intrebare nu ezitati sa ne contactati la numerele de telefon mai jos mentionate:
+            <br/>
+            Telefon: 0727582412 / 0721397591
+            <p>
+        </div>
+        
+        <!--CAROUSEL BORDER-UP-->
+        <div class="container-fluid" id="parallax1-border-down">
+        </div>
+        
+<!--CONTRACT----------------------------------------------------------------------------------------------------------------------->
+        <form id="form1" name="form1" onsubmit="return validateForm1();">
+        <div class="contract-container">
+            <p id="contract-date"></p>
+            <h1>Formular de inscriere</h1>
+            <br/>
+            <!--LASTNAME INPUT AND ERROR-->
+            <div class="row">
+                <div id="lastName-container" class="input-field">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input  id="input_lastName" name="lastname" type="text" class="validate contract-input" value="">
+                    <label for="input_lastName">Numele</label>
+                </div>
+            </div>
+            <p class="errors_p" id="error_lastname">Numele nu a fost completat.</p>    
+            <!--FIRSTNAME INPUT AND ERROR-->
+            <div class="row">
+                <div id="firstName-container" class="input-field">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input  id="input_firstName" name="firstname" type="text" class="validate contract-input" value="">
+                    <label for="input_firstName">Prenumele</label>
+                </div>
+            </div>
+            <p class="errors_p" id="error_firstname">Prenumele nu a fost completat.</p>
+            <!--DATE INPUT AND ERROR-->
+            <div class="row">
+                <div id="date-container" class="input-field">
+                    <i class="material-icons prefix">date_range</i>
+                    <input  id="input_date" name="date" type="date" class="validate contract-input" value="">
+                    <label for="input_date">Data nasterii</label>
+                </div>
+            </div>
+            <p class="errors_p" id="error_date">Data nu a fost introdusa.</p>
+            <!--AGE INPUT AND ERROR-->
+            <div class="row">
+                <div id="age-container" class="input-field">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input  id="input_age" name="age" type="text" class="validate contract-input" value="">
+                    <label for="input_age">Varsta</label>
+                </div>
+            </div>
+            <p class="errors_p" id="error_age">Varsta nu a fost introdusa.</p>
+            <!--SEX INPUT AND ERROR-->
+            <div class="row">
+                <div id="sex-container" class="input-field">
+                    <i class="material-icons prefix">group</i>
+                    <input  id="input_sex" name="sex" type="text" class="validate contract-input" value="">
+                    <label for="input_sex">Sex</label>
+                </div>
+            </div>
+            <p class="errors_p" id="error_sex">Sexul nu a fost introdus.</p>
+            <!--HOME INPUT AND ERROR-->
+            <div class="row">
+                <div id="home-container" class="input-field">
+                    <i class="material-icons prefix">home</i>
+                    <input  id="input_home" name="home" type="text" class="validate contract-input" value="">
+                    <label for="input_home">Localitatea de domiciliu</label>
+                </div>
+            </div>
+            <p class="errors_p" id="error_home">Localitatea de domiciliu nu a fost introdusa.</p>
+            <!--SCHOOL INPUT AND ERROR-->
+            <div class="row">
+                <div id="school-container" class="input-field">
+                    <i class="material-icons prefix">school</i>
+                    <input  id="input_school" name="school" type="text" class="validate contract-input" value="">
+                    <label for="input_school">Scoala de provenienta</label>
+                </div>
+            </div>
+            <p class="errors_p" id="error_school">Scoala de provenienta nu a fost introdusa.</p>
+            <!--TEACHER INPUT AND ERROR-->
+            <div class="row">
+                <div id="teacher-container" class="input-field">
+                    <i class="material-icons prefix">supervisor_account</i>
+                    <input id="input_teacher" name="teacher" type="text" class="validate contract-input" value="">
+                    <label for="input_teacher">Profesorul insotitor</label>
+                </div>
+            </div>
+            <p class="errors_p" id="error_teacher">Numele profesorului insotitor nu a fost introdus.</p>
+            <!--EMAIL INPUT AND ERROR-->
+            <div class="row">
+                <div id="email-container" class="input-field">
+                    <i class="material-icons prefix">contact_mail</i>
+                    <input id="input_email" name="email" type="email" class="validate contract-input" value="">
+                    <label for="input_email">Email</label>
+                </div>
+            </div>
+            <p class="errors_p" id="error_email">Email-ul nu a fost completat.</p>
+            <!--PHONE INPUT AND ERROR-->
+            <div class="row">
+                <div id="phone-container" class="input-field">
+                    <i class="material-icons prefix">call</i>
+                    <input id="input_phone" name="phone" type="text" class="validate contract-input" maxlength="10" value="">
+                    <label for="input_phone">Numarul de telefon</label>
+                </div>
+            </div>
+            <p class="errors_p" id="error_phone">Numarul de telefon nu a fost completat.</p>
+            <!--HEALTH INPUT AND ERROR-->
+            <div class="row">
+                <div id="health-container" class="input-field">
+                    <i class="material-icons prefix">local_hospital</i>
+                    <input id="input_health" name="health" type="text" class="validate" value="">
+                    <label for="input_health">Probleme de sanatate</label>
+                </div>
+            </div>
+            <!--DESCRIPTION INPUT AND ERROR-->
+            <div class="row">
+                <div id="description-container" class="input-field">
+                    <i class="material-icons prefix">description</i>
+                    <textarea id="input_description" name="description" type="text" class="materialize-textarea"></textarea>
+                    <label for="input_description">Detalii despre inscriere</label>
+                </div>
+            </div>
+            <br/>
+            <button type="submit" form="form1" value="Submit">Trimite formularul</button>
+        </div>
+        </form>
+        
+<!--FEEDBACK----------------------------------------------------------------------------------------------------------------------->
+        <form id="form2" name="form2" onsubmit="return validateForm2();">
+        <div class="feedback-container">
+            <p id="feedback-date"></p>
+            <h1>Formular de feedback</h1>
+            <br/><br/>
+            <!--QUESTION 1-->
+            <p>1). Cum ati aflat despre Tabara Master Education?</p>
+            <label>
+                <input class="with-gap" name="q1" type="radio" value="Internet."/>
+                <span>Internet.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q1" type="radio" value="Prieteni."/>
+                <span>Prieteni.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q1" type="radio" value="Scoala."/>
+                <span>Scoala.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q1" type="radio" value="Alte surse."/>
+                <span>Alte surse.</span>
+            </label><br/>
+            <p class="errors_p2">Nu ati raspuns la prima intrebare.</p>
+            <br/>
+            
+            <!--QUESTION 2-->
+            <p>2). De ce ai luat hotararea de a trimite copilul in tabara Master Education?</p>
+            <label>
+                <input class="with-gap" name="q2" type="radio" value="Pretul este accesibil."/>
+                <span>Pretul este accesibil.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q2" type="radio" value="Mi-a propus profesorul."/>
+                <span>Mi-a propus profesorul.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q2" type="radio" value="Activitatile mi se par interesante."/>
+                <span>Activitatile mi se par interesante.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q2" type="radio" value="Conditiile de cazare si masa sunt foarte bune."/>
+                <span>Conditiile de cazare si masa sunt foarte bune.</span>
+            </label><br/>
+            
+            <p class="errors_p2">Nu ati raspuns la a doua intrebare.</p>
+            <br/>
+            
+            <!--QUESTION 3-->
+            <p>3). Dupa participarea la programul educational  ati fost multumit de:</p>
+            <label>
+                <input class="with-gap" name="q3" type="radio" value="Cazare"/>
+                <span>Cazare.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q3" type="radio" value="Masa."/>
+                <span>Masa.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q3" type="radio" value="Calitatea programului educational."/>
+                <span>Calitatea programului educational.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q3" type="radio" value="Totul."/>
+                <span>Totul.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q3" type="radio" value="Nu sunt multumit de niciun serviciu."/>
+                <span>Nu sunt multumit de niciun serviciu.</span>
+            </label><br/>
+            
+            <p class="errors_p2">Nu ati raspuns la a treia intrebare.</p>
+            <br/> 
+            
+            <!--QUESTION 4-->
+            <p>4). In viitor ati opta pentru o alta tabara din cadrul Master Education?</p>
+            <label>
+                <input class="with-gap" name="q4" type="radio" value="Da, in aceeasi locatie."/>
+                <span>Da, in aceeasi locatie.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q4" type="radio" value="Da, dar o alta tabara."/>
+                <span>Da, dar o alta tabara.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q4" type="radio" value="Nu."/>
+                <span>Nu.</span>
+            </label><br/>
+            
+            <p class="errors_p2" id="error_q4">Nu ati raspuns la a patra intrebare.</p>
+            <br/>
+            
+            <!--QUESTION 5-->
+            <p>5). Chestionarul a fost completat de:</p>
+            <label>
+                <input class="with-gap" name="q5" type="radio" value="Mama/Tata."/>
+                <span>Mama/Tata.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q5" type="radio" value="Bunica/Bunic."/>
+                <span>Bunica/Bunic.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q5" type="radio" value="Frate/Sora."/>
+                <span>Frate/Sora.</span>
+            </label><br/>
+            <label>
+                <input class="with-gap" name="q5" type="radio" value="Alt grad de rudenie."/>
+                <span>Alt grad de rudenie.</span>
+            </label><br/>
+            
+            <p class="errors_p2" id="error_q5">Nu ati raspuns la a cincea intrebare.</p>
+            <br/>
+            
+            <!--QUESTION 6-->
+            <p>6). In cazul in care copilul dumneavoastra si-a manifestat vreo nemultumire, a intampinat vreo neplacere in tabara, va rugam sa ne detaliati problema. Pentru un raspuns prompt mentionati adresa de email sau numarul de telefon:</p>
+            <div class="row">
+                <div id="description-container2" class="input-field">
+                    <i class="material-icons prefix">description</i>
+                    <textarea rows="6" cols="20" id="input_description2" name="q6" type="text" class="materialize-textarea" value=""></textarea>
+                    <label for="input_description2">Detalii...</label>
+                </div>
+            </div>
+            
+            <!--SUBMIT BUTTON-->
+            <button type="submit" form="form2" value="Submit">Trimite formularul</button>
+        </div>
+        </form>
+        
+        <!--FOOTER ASK MARK-->
+        <a class="ask-container-a" href="./tabere.html">
+            <div class="ask-container">
+            Aflati mai multe despre taberele noastre !
+            </div>
+        </a>
+        
+        <!--FOOTER-->
+        <div class="container-fluid row footer">
+            <div class="container-fluid footer-title">
+                <img src="./images/logo5.webp">
+            </div>
+            
+            <div class="footer-left">
+                <p>
+                    Telefon: 0727582412 / 0721397591<br/>
+                    Email: tabaramastereducation@gmail.com<br/>
+                    Address: Str Calarasi, nr 6, Ploiesti, Prahova<br/>
+                    <br/>
+                </p>
+            </div>
+            
+            <div class="footer-right">
+                <img src="./images/background/b_footer.webp">
+            </div>
+             
+            <div class="container-fluid footer-bottom">
+                @Copyright 2018 - www.tabaramastereducation.eu Toate drepturile rezervate | 
+            </div>
+        </div>
+        <!------------------------------------------>
+        <!--WEB DESIGN BY ALEXANDRU-COSMIN GRIGORE-->
+        <!------------------------------------------>
+    </body>
+</html>

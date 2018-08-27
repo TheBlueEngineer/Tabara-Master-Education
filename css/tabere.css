@@ -1,0 +1,154 @@
+/*COLLAPSIBLE ---------------------------------------------------------------------------------------------------------------------*/
+body{
+    background: url("../images/background/b_munti3.webp");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.collapsible-container{
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.collapsible{
+    margin: 0;
+}
+
+.collapsible-header{
+    height: 10vh;
+    background-color: #ebfaeb;
+    padding: 0vw 0vw 0vw 1vw;
+    height: 4vw;
+    color: #003300;
+    font-size: 2.5vw;
+    font-weight: bolder;
+    border-width: 0.5vw;
+    border-color: #003300;
+    transition: color 1s, background-color 1s;
+}
+
+.collapsible-body{
+    background: linear-gradient(to bottom, #ebfaeb 0%,  #ccffdd 100%);
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5vh;
+}
+
+.collapsible-body>p{
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-size: 2vw;
+    font-weight: bolder;
+    text-align: center;
+    color: #003300;
+}
+
+h2{
+    width: 100%;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    
+    color: gray;
+    font-size: 2.4vw;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+}
+/*SECOND-DESCRIPTION --------------------------------------------------------------------------------------------------------------*/
+#second-description{ 
+    font-size: 2.4vw;
+    font-weight: bolder;
+    text-align: center;
+    color: #003300;
+    background-color: #ebfaeb;
+}
+
+#second-description>h1{
+    font-size: 3vw;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+#second-description>p{
+    margin: 0;
+}
+
+#second-description-top{
+    height: 2vw;
+    background: linear-gradient(to top, #ebfaeb 0%, #85e085 90%, #000000 100%);
+}
+
+#second-description-down{
+    height: 2vw;
+    background: linear-gradient(to bottom, #ebfaeb 0%, #85e085 90%, #000000 100%);
+}
+
+/*COLLAPSIBLE IMAGES --------------------------------------------------------------------------------------------------------------*/
+.collapsible-image{
+    width: 100%;
+    height: 40vw;
+    border: 5px solid #003300;
+    transition: border-radius 0.5s, border-color 0.5s;
+}
+.collapsible-image:hover{
+    border-radius: 10% 0 10% 0;
+    border-color: #85e085;
+}
+
+/*THIRD DESCRIPTION ---------------------------------------------------------------------------------------------------------------*/
+.third-description{
+    padding: 0;
+}
+
+.third-description-text{
+    background-color: white;
+    opacity: 0.7;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2.5vw 5% 2.5vw 5%;
+    transition: opacity 0.75s;
+}
+.third-description-text>h1{
+    font-size: 3.5vw;
+    font-weight: bolder;
+    text-align: center;
+    color: #003300;
+}
+.third-description-text>p{
+    font-size: 2vw;
+    font-weight: bolder;
+    text-align: center;
+    color: #003300;
+}
+
+#third-description-image1{
+    background: url("../images/tabere/2.webp");
+    background-size: 100% 100%;
+}
+
+#third-description-image2{
+    background: url("../images/tabere/1.webp");
+    background-size: 100% 100%;
+}
+
+/*ANIMATIONS ----------------------------------------------------------------------------------------------------------------------*/
+@keyframes fade-in-parallax{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes ask-animation{
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: #ccffcc;
+    }
+}

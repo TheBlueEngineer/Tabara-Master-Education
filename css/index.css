@@ -1,0 +1,180 @@
+/*SECOND DESCRIPTION --------------------------------------------------------------------------------------------------------------*/
+#second-description-container{
+    padding: 0;
+    background-image: url("../images/background/b_munti1.webp");
+    background-size: 100% 100%;
+}
+
+#second-description{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 2vw;
+    font-weight: bolder;
+    text-align: center;
+    color: #003300;
+    opacity: 0.6;
+    background-color: #ebfaeb;
+    transition: opacity 0.75s;
+}
+
+#second-description-header{ 
+    padding-left: 35vw;
+    background-color: #ebfaeb;
+}
+
+#second-description-image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+@media(max-width: 417px){
+    #second-description-header-image{
+        width: 30vw;
+        height: 10vw;
+    }
+}
+@media(min-width: 418px){
+    #second-description-header-image{
+        width: 30vw;
+        height: 5vw;
+    }    
+}
+/*CAROUSEL#1 - FIRST PICTURES AFTER THE FIRST DESCRIPTION -------------------------------------------------------------------------*/
+#carousel1-container{
+    height: 50vw;
+    padding: 0;
+}
+
+#carousel1-border-bottom, #second-description-border-bottom, #third-description-border-bottom{
+    height: 2vw;
+    background: linear-gradient(to top, #ebfaeb 0%, #85e085 90%, #000000 100%);
+}
+
+#carousel1-border-top, #second-description-border-top, #third-description-border-top{
+    height: 2vw;
+    background: linear-gradient(to bottom, #ebfaeb 0%, #85e085 90%, #000000 100%);
+}
+
+.slides{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    z-index= -1;
+    transition: opacity 1s;
+}
+.slides.inactive{
+    display: none;
+}
+.slides.active{
+    display: block;
+    animation-name: fade-in-slide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#left-arrow, #right-arrow{
+    opacity: 0.5;
+    width: 8vw;
+    height: 30vw;
+    margin-top: 10vw;
+    position: absolute;
+    transition: opacity 1s;
+    z-index: 1;
+}
+
+#right-arrow{
+    margin-left: 90.5vw;
+    transform: scaleX(-1);
+}
+
+#left-arrow:hover, #right-arrow:hover{
+    opacity: 0.9;
+}
+
+/*THIRD DESCRIPTION - AMINTIRI PRETIOASE DIN AVENTURILE NOASTRE -------------------------------------------------------------------*/
+#third-description-header{
+    padding-left: 10vw;
+    background-color: #ebfaeb;
+}
+
+@media(max-width: 417px){
+    #third-description-header-image{
+        width: 80vw;
+        height: 10vw;
+    }
+}
+@media(min-width: 418px){
+    #third-description-header-image{
+        width: 80vw;
+        height: 5vw;
+    }    
+}
+
+@keyframes fade-in-slide{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*ROTATING CAROUSEL ---------------------------------------------------------------------------------------------------------------*/
+.materialboxed{
+    width: 43vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-top: 3vh;
+    height: 45vh;
+    border-style: outset;
+    border-width: 1vw;
+    border-color: #85e085;
+}
+
+/*PARALLAX #2 - IMAGINI DIN AVENTURILE NOASTRE ------------------------------------------------------------------------------------*/
+@media(max-width: 417px) {
+    .parallax2-text{
+        height: 10vw;
+        background: linear-gradient(to bottom, #000000 0%, #85e085 10%, #ebfaeb 30%, #ebfaeb 70%, #85e085 90%, #000000 100%);
+        font-size: 7vw;
+        font-weight: bolder;
+        text-align: center;
+        color: #003300;
+    }
+}
+@media(min-width: 418px) {
+    .parallax2-text{
+        height: 5vw;
+        padding-top: 0.2vw;
+        background: linear-gradient(to bottom, #000000 0%, #85e085 10%, #ebfaeb 30%, #ebfaeb 70%, #85e085 90%, #000000 100%);
+        font-size: 3vw;
+        font-weight: bolder;
+        text-align: center;
+        color: #003300;
+    }
+}
+
+.parallax2-image{
+    width: 100%;
+}
+/*ANIMATIONS FOR ELEMENTS ------------------------------------------------------------------------------------------------------------------*/
+@keyframes ask-animation{
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: #ccffcc;
+    }
+}
+
+@keyframes fade-in-parallax{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

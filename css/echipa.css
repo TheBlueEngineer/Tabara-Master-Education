@@ -1,0 +1,93 @@
+/*ECHIPA CONTAINER ----------------------------------------------------------------------------------------------------------------*/
+body{
+    background: url("../images/background/b_munti2.webp");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.echipa-container{
+    padding: 0 10% 0 10%;
+}
+
+.echipa-container-second{
+    padding: 2.5vw 5vw 2.5vw 5vw;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.echipa-tab{
+    background: linear-gradient(to bottom, #ffffff 0%, #b3ffb3 100%);
+    padding: 2vw 2.5% 2vw 2.5%;
+    margin-bottom: 0 0 0 0;
+    
+    border-style: outset;
+    border-width: 0.5vw;
+    border-color: #85e085;
+}
+
+.echipa-tab-image{
+    width: 20%;
+    height: 11vw;
+    border-style: outset;
+    border-width: 0.3vw;
+    border-color: #85e085;
+}
+
+.echipa-tab-text-container{
+    width: 77.5%;
+    margin: 0 0 0 2.5%;   
+}
+
+.collapsible-header{
+    background-color: #b3ffb3;
+    border-style: solid;
+    border-width: 0 0 0.3vw 0;
+    border-color: #538C53;
+    font-size: 1.6vw;
+    font-weight: bolder;
+    color: #003300;
+    text-align: left;
+    height: 2vw;
+    padding: 0 0 2.6vw 2.5%;
+}
+
+.echipa-tab-text1, .collapsible-body{
+    padding: 3% 2.5% 3% 2.5%;
+    width: 100%;
+    background: linear-gradient(to bottom, #ebfaeb 0%,  #b3ffb3 100%);
+    font-size: 1.6vw;
+    font-weight: bolder;
+    color: #003300;
+    animation: text-animation 2s ease-in alternate infinite;
+}
+.echipa-tab-text1{
+    text-align: left;
+}
+.collapsible-body{
+    text-align: justify;
+}
+
+.collapsible{
+    margin: 0;
+}
+
+/*ANIMATIONS -------------------------------------------------------------------------------------------------------------------------------*/
+
+@keyframes tab-animation{
+    from{
+        background-color: darkgreen;
+    }
+    to{
+        background-color: forestgreen;
+    }
+}
+
+@keyframes ask-animation{
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: #ccffcc;
+    }
+}
